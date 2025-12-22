@@ -2,14 +2,14 @@
 
 Technical Report
 
-📌Summary
+Summary
 
 The objective of this project was to develop a machine learning model capable of predicting how many days a customer will keep a DVD, enabling a rental company to optimize inventory planning.
 
 The key performance requirement was to achieve a Mean Squared Error (MSE) ≤ 3.0.
 Using a Baseline vs. Challenger modeling strategy, the Random Forest Regressor emerged as the superior model, achieving an MSE of 2.0301, significantly exceeding the project goal.
 
-🧹 1. Data Preparation & Feature Engineering
+ 1. Data Preparation & Feature Engineering
 
 The raw dataset (rental_info.csv) required several transformations to make it suitable for regression modeling:
 
@@ -33,7 +33,7 @@ Raw date columns (e.g., return timestamps) were removed.
 
 Including the return date would leak the target variable and invalidate real-world predictions.
 
-🧪 2. Experimental Design
+ 2. Experimental Design
 
 To ensure a fair and interpretable comparison, two models were evaluated:
 
@@ -83,11 +83,11 @@ Release year
 Special features
 have minimal influence compared to financial variables.
 
-📌 Implication: Pricing strategy plays a larger role in rental duration than movie characteristics.
+ Implication: Pricing strategy plays a larger role in rental duration than movie characteristics.
 
 ✅ 5. Final Recommendation
 
-We recommend deploying the Random Forest Regressor for operational inventory planning.
+Recommend deploying the Random Forest Regressor for operational inventory planning.
 
 🚀 Why Random Forest?
 
