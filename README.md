@@ -10,17 +10,17 @@ Using a Baseline vs. Challenger modeling strategy, the Random Forest Regressor e
 
 The raw dataset (rental_info.csv) required several transformations to make it suitable for regression modeling:
 
-🔹 Target Variable Engineering
+Target Variable Engineering
 rental_length_days was derived from the difference between rental and return timestamps.
 
-🔹 Text Feature Processing
+Text Feature Processing
 The special_features column was parsed to create binary indicator variables:
 
 deleted_scenes, behind_the_scenes
 
 This enabled the model to interpret movie content attributes numerically.
 
-🔹 Data Leakage Prevention
+ Data Leakage Prevention
 
 Raw date columns (e.g., return timestamps) were removed.
 Including the return date would leak the target variable and invalidate real-world predictions.
@@ -30,11 +30,11 @@ Including the return date would leak the target variable and invalidate real-wor
 
 To ensure a fair and interpretable comparison, two models were evaluated:
 
-📉 Baseline Model — Linear Regression
+Baseline Model — Linear Regression
 Simple and interpretable
 
 Assumes linear relationships between features and rental duration
-🌲 Challenger Model — Random Forest Regressor
+ Challenger Model — Random Forest Regressor
 
 Captures non-linear relationships
 Ensemble of 100 decision trees
@@ -49,14 +49,14 @@ Model	Mean Squared Error (MSE)	Performance vs. Goal
 Linear Regression	2.9417	✅ Pass (Borderline)
 Random Forest	2.0301	✅ Pass (Excellent)
 
-📈 Result:
+Result:
 The Random Forest model outperformed the baseline by approximately 31%, demonstrating its ability to capture complex rental behavior patterns.
 
 
 4. Key Business Insights
 Feature importance analysis from the Random Forest model revealed:
 
-💰 Price-Driven Behavior
+Price-Driven Behavior
 
 Amount paid and rental rate are the strongest predictors of rental duration.
 Customers appear to adjust how long they keep DVDs based on cost considerations.
@@ -75,7 +75,7 @@ have minimal influence compared to financial variables.
 5. Final Recommendation
 Recommend deploying the Random Forest Regressor for operational inventory planning.
 
-🚀 Why Random Forest?
+ Why Random Forest?
 
 Achieves high predictive accuracy (MSE = 2.03)
 Robust to non-linear customer behavior
