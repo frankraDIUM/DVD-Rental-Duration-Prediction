@@ -46,8 +46,8 @@ Reduces variance through averaging
 Models were evaluated on a 20% hold-out test set unseen during training.
 
 Model	Mean Squared Error (MSE)	Performance vs. Goal
-Linear Regression	2.9417	✅ Pass (Borderline)
-Random Forest	2.0301	✅ Pass (Excellent)
+- Linear Regression	2.9417	✅ Pass (Borderline)
+- Random Forest	2.0301	✅ Pass (Excellent)
 
 Result:
 The Random Forest model outperformed the baseline by approximately 31%, demonstrating its ability to capture complex rental behavior patterns.
